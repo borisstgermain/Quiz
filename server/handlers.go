@@ -18,6 +18,20 @@ func GetQuestions(w http.ResponseWriter, r *http.Request) {
 
 	body, _ := ioutil.ReadAll(res.Body)
 
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Add("Access-Control-Allow-Methods", "GET")
+	w.Header().Add("Access-Control-Allow-Headers", "Content-Type")
 	w.WriteHeader(http.StatusOK)
 	w.Write(body)
+}
+
+func GetIndex(w http.ResponseWriter, r *http.Request) {
+	content, err := ioutil.ReadFile("/Users/borisstgermain/projects/quiz/server/public/index.html")
+	if err != nil {
+		log.Println(err)
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+
+	w.Write(content)
 }
