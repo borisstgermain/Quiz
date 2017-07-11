@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "plugin:flowtype/recommended"
+    ],
+    "plugins": [
+        "flowtype",
+        "compat"
+    ],
+    "rules": {
+        "compat/compat": 2
+    }
+}
