@@ -2,6 +2,7 @@
 
 import path from 'path';
 import webpack from 'webpack';
+// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
     entry: [
@@ -17,7 +18,17 @@ export default {
 
     module: {
         rules: [
-            { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ }
+            {
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                // use: ExtractTextPlugin.extract([ 'css-loader', 'postcss-loader' ])
+                use: ['style-loader', 'css-loader', 'postcss-loader']
+            }
         ]
     },
 
@@ -37,6 +48,7 @@ export default {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
+        // new ExtractTextPlugin('styles.css'),
     ],
 
     context: path.resolve(__dirname, '..')
