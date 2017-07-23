@@ -6,7 +6,8 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 
 import configureStore from './store/configureStore';
-import App from './components/app';
+import App from './components/App/';
+import './index.css';
 
 const store = configureStore();
 
@@ -23,9 +24,9 @@ render(wrapApp(App, store), rootEl);
 
 if (module.hot) {
     // flow-disable-next-line
-    module.hot.accept('./components/app', () => {
+    module.hot.accept('./components/App', () => {
         // eslint-disable-next-line global-require
-        const NextApp = require('./components/app').default;
+        const NextApp = require('./components/App').default;
         render(wrapApp(NextApp, store), rootEl);
     });
 }

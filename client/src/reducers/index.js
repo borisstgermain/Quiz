@@ -1,8 +1,10 @@
+// @flow
+
 import { combineReducers } from 'redux';
-import questionReducer from './question_reducer';
+import quizReducer from '../Quiz/reducer';
 
 const rootReducer = combineReducers({
-    question: questionReducer
+    quiz: quizReducer
 });
 
 export default rootReducer;

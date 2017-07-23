@@ -1,0 +1,53 @@
+.question {
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.button {
+    color: #421b75;
+    border: none;
+    background-color: #fcdb00;
+
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.button:hover {
+    background-color: #f5de5b;
+}
+
+.button--hide {
+    position: absolute;
+
+    visibility: hidden;
+}
+
+.answer {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.answer--hide {
+    visibility: hidden;
+}
+
+.answer--show {
+    visibility: visible;
+}
+
+.comment {
+    font-style: italic;
+}
+
+.comment--show {
+    visibility: visible;
+}
+
+.comment--hide {
+    visibility: hidden;
+}

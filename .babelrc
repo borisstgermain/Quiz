@@ -6,6 +6,8 @@
     ],
 
     "plugins": [
-        "flow-react-proptypes"
+        "flow-react-proptypes",
+        "transform-runtime",
+        ["transform-object-rest-spread", { "useBuiltIns": true }]
     ]
 }

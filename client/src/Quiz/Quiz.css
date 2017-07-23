@@ -1,0 +1,31 @@
+.quiz {
+    color: #fff;
+
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.next-button {
+    color: #421b75;
+    border: none;
+    background-color: #fcdb00;
+
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.next-button:hover {
+    background-color: #f5de5b;
+}
+
+.next-button--hide {
+    position: absolute;
+
+    visibility: hidden;
+}
+
+.next-button--show {
+    position: static;
+
+    visibility: visible;
+}

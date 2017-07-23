@@ -27,7 +27,12 @@ export default {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 // use: ExtractTextPlugin.extract([ 'css-loader', 'postcss-loader' ])
-                use: ['style-loader', 'css-loader', 'postcss-loader']
+                // use: ['style-loader', 'css-loader', 'postcss-loader']
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { modules: true, importLoaders: 1 } },
+                    'postcss-loader'
+                ]
             }
         ]
     },
