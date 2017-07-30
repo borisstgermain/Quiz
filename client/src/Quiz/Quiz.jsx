@@ -25,7 +25,7 @@ export class Quiz extends Component {
 
     componentWillMount() {
         const { fetchQuestions, questions } = this.props;
-        const hasQuestions = questions > 0;
+        const hasQuestions = questions.length > 0;
         !hasQuestions && fetchQuestions();
     }
 

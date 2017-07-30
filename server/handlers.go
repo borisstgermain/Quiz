@@ -24,14 +24,3 @@ func GetQuestions(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(body)
 }
-
-func GetIndex(w http.ResponseWriter, r *http.Request) {
-	content, err := ioutil.ReadFile("/Users/borisstgermain/projects/quiz/server/public/index.html")
-	if err != nil {
-		log.Println(err)
-		w.WriteHeader(http.StatusNotFound)
-		return
-	}
-
-	w.Write(content)
-}

@@ -12,7 +12,7 @@ export default {
 
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'server/public'),
+        path: path.resolve(__dirname, 'public'),
         publicPath: 'http://localhost:8080/'
     },
 

@@ -4,12 +4,13 @@
   "description": "Quiz training",
   "author": "Alexey Borisov",
   "scripts": {
-    "start:server": "go run server/main.go server/handlers.go server/routers.go",
-    "start:client": "webpack-dev-server --progress  --colors --watch --content-base ./server/public --config ./configs/webpack.dev.config.babel.js",
+    "start:server": "go run server/main.go server/handlers.go",
+    "start:client": "webpack-dev-server --progress  --colors --watch --content-base ./public --config ./configs/webpack.dev.config.babel.js",
     "test": "eslint ./client/src && flow && jest --coverage",
     "test:watch": "jest --watch",
     "precommit": "yarn run test",
-    "prepush": "yarn run test"
+    "prepush": "yarn run test",
+    "prod:build": "webpack -p --progress --config ./configs/webpack.prod.config.babel.js"
   },
   "browserslist": [
     "> 1%"
