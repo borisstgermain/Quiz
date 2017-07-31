@@ -2,7 +2,7 @@
 
 import path from 'path';
 import webpack from 'webpack';
-// import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: [
@@ -12,8 +12,7 @@ export default {
 
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public'),
-        publicPath: 'http://localhost:8080/'
+        path: path.resolve(__dirname, 'public')
     },
 
     module: {
@@ -53,7 +52,10 @@ export default {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        // new ExtractTextPlugin('styles.css'),
+        new HtmlWebpackPlugin({
+            title: 'Quiz',
+            template: './client/assets/index.html'
+        })
     ],
 
     context: path.resolve(__dirname, '..')
