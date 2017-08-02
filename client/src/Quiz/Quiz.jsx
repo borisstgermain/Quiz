@@ -30,9 +30,7 @@ export class Quiz extends Component {
     }
 
     componentWillReceiveProps(next) {
-        console.log(next);
         if (next.questions.length === 0) {
-            console.log('need fetch');
             this.props.fetchQuestions();
         }
     }
@@ -65,7 +63,7 @@ export class Quiz extends Component {
                     <button className={`${style['next-button']}  ${this.state.isShown ? style['next-button--show'] : style['next-button--hide']}`}
                         onClick={this.nextClick}
                     >
-                        Следующий
+                        Следующий &rarr;
                     </button>
                 </div>
             )

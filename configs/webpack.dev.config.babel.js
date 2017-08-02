@@ -29,7 +29,13 @@ export default {
                 // use: ['style-loader', 'css-loader', 'postcss-loader']
                 use: [
                     'style-loader',
-                    { loader: 'css-loader', options: { modules: true, importLoaders: 1 } },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[local]--[hash:base64:5]',
+                        },
+                    },
                     'postcss-loader'
                 ]
             }
