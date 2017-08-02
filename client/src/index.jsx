@@ -18,7 +18,8 @@ const wrapApp = (Component, store) => (
         </AppContainer>
     </Provider>
 );
-const rootEl = document.getElementById('root');
+const rootEl = document.querySelector('.root');
+rootEl.style.height = '100%';
 
 render(wrapApp(App, store), rootEl);
 

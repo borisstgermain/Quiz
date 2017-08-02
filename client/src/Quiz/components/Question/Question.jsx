@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import style from './Question.css';
 
-export default function Question({ question, answer, comment = '', isShown, clickHandler }) {
+export default function Question({ question, answer, comments = '', isShown, clickHandler }) {
     return(
         <div className={style.question}>
             <p className={style.title}>{question}</p>
@@ -16,7 +16,7 @@ export default function Question({ question, answer, comment = '', isShown, clic
                 {answer}
             </p>
             <p className={`${style.comment}  ${isShown ? style['comment--show'] : style['comment--hide']}`}>
-                {comment}
+                {comments}
             </p>
         </div>
     )
