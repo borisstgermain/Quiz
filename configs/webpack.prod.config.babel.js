@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
     entry: {
@@ -72,6 +73,10 @@ export default {
         new webpack.optimize.ModuleConcatenationPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Quiz',
+            template: './client/assets/index.html'
         })
     ]
 }

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Question component Component testing Click handler changes prop – isShow  1`] = `
+<div
+  className="question"
+>
+  <p
+    className="title"
+  >
+    What is this?
+  </p>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Показать ответ
+  </button>
+  <p
+    className="answer  answer--hide"
+  >
+    JS
+  </p>
+  <p
+    className="comment  comment--hide"
+  />
+</div>
+`;
+
+exports[`Question component Component testing Click handler changes prop – isShow  2`] = `
+<div
+  className="question"
+>
+  <p
+    className="title"
+  >
+    What is this?
+  </p>
+  <button
+    className="button--hide"
+    onClick={[Function]}
+  >
+    Показать ответ
+  </button>
+  <p
+    className="answer  answer--show"
+  >
+    JS
+  </p>
+  <p
+    className="comment  comment--show"
+  />
+</div>
+`;
+
+exports[`Question component Component testing Contains elements, correct text / Snapshot 1`] = `
+<div
+  className="question"
+>
+  <p
+    className="title"
+  >
+    What is this?
+  </p>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Показать ответ
+  </button>
+  <p
+    className="answer  answer--hide"
+  >
+    JS
+  </p>
+  <p
+    className="comment  comment--hide"
+  />
+</div>
+`;
