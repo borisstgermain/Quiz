@@ -71,7 +71,7 @@ export class Quiz extends Component {
     }
 }
 
-const mapStateToProps = ({ quiz }) => {
+export function mapStateToProps({ quiz }) {
     return {
         questions: getQuestions(quiz),
         hasQuestions: hasQuestions(quiz),
@@ -79,6 +79,6 @@ const mapStateToProps = ({ quiz }) => {
         error: quiz.error
     }
 };
-const mapDispatchToProps = { fetchQuestions, removeQuestion };
+export const mapDispatchToProps = { fetchQuestions, removeQuestion };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Quiz);

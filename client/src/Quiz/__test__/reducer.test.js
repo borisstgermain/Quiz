@@ -1,8 +1,8 @@
-import reducer from './reducer';
+import reducer from '../reducer';
 import {
     FETCH_QUESTIONS, FETCH_QUESTIONS_SUCCESS, FETCH_QUESTIONS_FAILURE,
     REMOVE_QUESTION
-} from './constant';
+} from '../constant';
 
 const initialState = {
     questions: [],

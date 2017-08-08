@@ -8,6 +8,7 @@ import { FETCH_QUESTIONS } from './constant';
 import { toJson } from './utils/parser';
 import { formatQuestion } from './utils/format';
 
+
 export function* fetchQuestionsAsync(action) {
     try {
         const res = yield call(getQuestions);

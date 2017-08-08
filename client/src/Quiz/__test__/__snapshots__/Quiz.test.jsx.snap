@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Connected Quiz Component testing Contains / Snapshot 1`] = `
+<Quiz
+  error=""
+  fetchQuestions={[Function]}
+  hasQuestions={true}
+  isFetching=""
+  questions={
+    Array [
+      Object {
+        "answer": "JS",
+        "question": "What is best language?",
+      },
+      Object {
+        "answer": "Kaka",
+        "question": "What is this?",
+      },
+    ]
+  }
+  removeQuestion={[Function]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "notify": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": null,
+    }
+  }
+/>
+`;
+
+exports[`Quiz Component testing Contains components 1`] = `
+<div
+  className="quiz"
+>
+  <Question
+    answer="JS"
+    clickHandler={[Function]}
+    isShown={false}
+    question="What is best language?"
+  />
+  <button
+    className="next-button  next-button--hide"
+    onClick={[Function]}
+  >
+    Следующий →
+  </button>
+</div>
+`;

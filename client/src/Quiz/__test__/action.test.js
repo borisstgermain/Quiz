@@ -1,11 +1,11 @@
 import {
     fetchQuestions, fetchQuestionsSuccess, fetchQuestionsFailure,
     removeQuestion
-} from './action';
+} from '../action';
 import {
     FETCH_QUESTIONS, FETCH_QUESTIONS_SUCCESS, FETCH_QUESTIONS_FAILURE,
     REMOVE_QUESTION
-} from './constant';
+} from '../constant';
 
 
 describe('Quiz Action creators', () => {
