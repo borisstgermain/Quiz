@@ -1,6 +1,7 @@
 .app {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    background: linear-gradient(to bottom, #362057 60%, #3b4073);
-    font-size: 100%;
+  background: linear-gradient(to bottom, #362057 60%, #3b4073);
+
+  font-size: 100%;
 }

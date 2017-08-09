@@ -7,15 +7,18 @@ import rootReducer from '../reducers';
 import rootSaga from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
-const middlewares = [ sagaMiddleware ];
+const middlewares = [
+  sagaMiddleware,
+];
+// eslint-disable-next-line no-underscore-dangle
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default function configureStore() {
-    const store = createStore(
-        rootReducer,
-        composeEnhancers(applyMiddleware(...middlewares))
-    );
-    sagaMiddleware.run(rootSaga);
+  const store = createStore(
+    rootReducer,
+    composeEnhancers(applyMiddleware(...middlewares)),
+  );
+  sagaMiddleware.run(rootSaga);
 
-    return store;
+  return store;
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export default function(WrappedComponent) {
-    class LoaderHOC extends Component {
-        render() {
-            const { isFetching, error } = this.props;
+export default function (WrappedComponent) {
+  class LoaderHOC extends Component {
+    render() {
+      const { isFetching, error } = this.props;
 
             if (isFetching) {
                 return <div>{"Loading..."}</div>;

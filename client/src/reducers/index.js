@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 import quizReducer from '../Quiz/reducer';
 
 const rootReducer = combineReducers({
-    quiz: quizReducer
+  quiz: quizReducer,
 });
 
 export default rootReducer;
