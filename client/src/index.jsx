@@ -11,12 +11,12 @@ import './index.css';
 
 const store = configureStore();
 
-const wrapApp = (Component, store) => (
-    <Provider store={store}>
-        <AppContainer>
-            <Component />
-        </AppContainer>
-    </Provider>
+const wrapApp = (Component, reduxStore) => (
+  <Provider store={reduxStore}>
+    <AppContainer>
+      <Component />
+    </AppContainer>
+  </Provider>
 );
 const rootEl = document.querySelector('.root');
 rootEl.style.height = '100%';
@@ -24,10 +24,10 @@ rootEl.style.height = '100%';
 render(wrapApp(App, store), rootEl);
 
 if (module.hot) {
-    // flow-disable-next-line
-    module.hot.accept('./components/App', () => {
-        // eslint-disable-next-line global-require
-        const NextApp = require('./components/App').default;
-        render(wrapApp(NextApp, store), rootEl);
-    });
+  // flow-disable-next-line
+  module.hot.accept('./components/App', () => {
+    // eslint-disable-next-line global-require
+    const NextApp = require('./components/App').default;
+    render(wrapApp(NextApp, store), rootEl);
+  });
 }
